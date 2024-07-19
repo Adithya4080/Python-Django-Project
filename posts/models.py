@@ -8,7 +8,7 @@ class Author(models.Model):
     def __str__(self):
         return self.name
     
-class Categoty(models.Model):
+class Category(models.Model):
     title = models.CharField(max_length=25)
 
     class Meta:

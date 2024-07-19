@@ -1,5 +1,5 @@
 from django.contrib import admin
-from posts.models import Author, Categoty, Post
+from posts.models import Author, Category, Post
 
 class AuthorAdmin(admin.ModelAdmin):
     list_display = ("name", "user")
@@ -7,7 +7,7 @@ class AuthorAdmin(admin.ModelAdmin):
 admin.site.register(Author)
 
 
-admin.site.register(Categoty)
+admin.site.register(Category)
 
 class PostAdmin(admin.ModelAdmin):
     list_display = ("title","author","published_date","short_description")
