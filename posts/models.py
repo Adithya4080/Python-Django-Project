@@ -11,6 +11,9 @@ class Author(models.Model):
 class Categoty(models.Model):
     title = models.CharField(max_length=25)
 
+    class Meta:
+        verbose_name_plural = "categories"
+
     def __str__(self):
         return self.title
     
