@@ -1,61 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Blog Post | Create your blog</title>
-        <link
-            rel="stylesheet"
-            href="./css/style.css"
-            type="text/css"
-        />
-        <link
-        rel="stylesheet"
-        href="./css/ck-editor.css"
-        type="text/css"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="./images/icons/blog-logo.svg"
-        />     
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta property="og:image" content="" />
-        <meta name="description" content="" />
-        <meta name="keywords" content="" />
-        <script src="./js/jquery-3.6.0.min.js"></script>
-        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="./js/script.js"></script>
-        <script src="./js/ckeditor.js"></script>
-    </head>
-    <body> 
+{% extends "base.html" %}
+    {% block content %}
+    {% load static %}
         <section id="edit-post-home">
             <section class="wrapper">   
-                <header>
-                    <h1>
-                        <a href="./index.html">
-                            <img
-                                src="./images/icons/blog-logo.svg"
-                                alt="Logo"
-                            />
-                        </a>
-                    </h1>
-                    <div>
-                        <a href="create.html" class="login my-posts">
-                        Create
-                        </a>
-                        <a href="my-posts.html" class="login my-posts">
-                            My Posts
-                        </a>
-                        <a href="#" class="login"> Logout </a>
-                    <div>
-                    <div id="hamburger-icon">
-                        <img
-                            src="./images/icons/hamburger.svg"
-                            alt="Hamburger"
-                        />
-                    </div>
-                </header>
+                {% include 'web/includes/header.html' %}
                 <section class="spotlight">
                     <h3>Create new post</h3>
                     <form action="" method="post" enctype="multipart/form-data">
@@ -115,20 +63,12 @@
         </section>
         <!-- <script src="/static/ckeditor/ckeditor-init.js" data-ckeditor-basepath="/static/ckeditor/ckeditor/" id="ckeditor-init-script"></script> -->
         <!-- <script src="./js/ckeditor.js"></script> -->
-        <script>ClassicEditor
-            .create( document.querySelector( '.editor' ), {
-                
+        <!-- <script>ClassicEditor
+            .create( document.querySelector( '.editor' ), {                
                 licenseKey: '',
-                
-                
-                
             } )
             .then( editor => {
                 window.editor = editor;
-        
-                
-                
-                
             } )
             .catch( error => {
                 console.error( 'Oops, something went wrong!' );
@@ -136,6 +76,5 @@
                 console.warn( 'Build id: fbn1rnj89y5k-nohdljl880ze' );
                 console.error( error );
             } );
-        </script>
-    </body>
-</html>
+        </script> -->
+    {% endblock %}
